@@ -3,15 +3,11 @@ const FibonacciSeries = (num) => {
   if (num < 2) {
     return num;
   }
-  let prev = 0,
-    curr = 1,
-    next;
+  let series = [0, 1];
   for (let i = 2; i < num; i++) {
-    next = prev + curr;
-    prev = curr;
-    curr = next;
+    series.push(series[i - 1] + series[i - 2]);
   }
-  return next;
+  return series;
 };
-let ans = FibonacciSeries(8);
+let ans = FibonacciSeries(5);
 console.log("The Fibonacci Series of the number is: ", ans);
