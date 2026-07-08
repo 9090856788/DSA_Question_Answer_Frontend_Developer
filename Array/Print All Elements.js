@@ -42,3 +42,6 @@ function printArrayIntegers(arr) {
   }
 }
 printArrayIntegers(integerArr);
+
+// Pattern - Traversal
+// Time complexity - O(n)
